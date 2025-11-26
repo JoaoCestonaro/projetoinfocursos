@@ -20,7 +20,7 @@ const NewsArticle = () => {
           <div className="news-article-hero__content">
             <span className="badge">{article.category}</span>
             <h1>{article.title}</h1>
-            <div className="news-article-hero__meta" aria-label="Informações da publicação">
+            <div className="news-article-hero__meta" aria-label="Informaï¿½ï¿½es da publicaï¿½ï¿½o">
               <span>
                 <LuClock3 size={18} /> {article.readTime}
               </span>
@@ -31,9 +31,6 @@ const NewsArticle = () => {
 
           <figure className="news-article-cover">
             <img src={article.cover.src} alt={article.cover.alt} loading="lazy" />
-            <figcaption className="text-muted" style={{ padding: '0.75rem 1rem' }}>
-              Crédito: {article.cover.credits}
-            </figcaption>
           </figure>
         </div>
 
@@ -46,7 +43,6 @@ const NewsArticle = () => {
 
         {article.references?.length > 0 && (
           <div className="news-article-references">
-            <strong>Referências e leituras recomendadas</strong>
             <ul className="footer-links" style={{ gap: '0.5rem' }}>
               {article.references.map((reference) => (
                 <li key={reference.url}>
@@ -64,7 +60,7 @@ const NewsArticle = () => {
             <LuArrowLeft size={18} /> Voltar para novidades
           </Link>
           <Link to="/cursos" className="btn btn-primary">
-            Explorar trilhas relacionadas
+            Explorar cursos relacionadas
             <LuArrowUpRight size={18} />
           </Link>
         </div>

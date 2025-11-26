@@ -1,6 +1,5 @@
 ﻿import { NavLink } from 'react-router-dom'
 import { LuSparkles, LuArrowUpRight, LuShieldCheck, LuUsers, LuGraduationCap, LuThumbsUp } from 'react-icons/lu'
-import heroIllustration from '../assets/ilustracao-tecnologia.png'
 import { courses } from '../data/courses.js'
 import { news } from '../data/news.js'
 import { highlights } from '../data/features.js'
@@ -41,15 +40,6 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="home-hero__media">
-            <div className="home-hero__visual">
-              <img src={heroIllustration} alt="Ilustração futurista de tecnologia" loading="lazy" />
-              <div className="home-hero__stack">
-                <span>Linguagens principais</span>
-                <span>Notícias</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

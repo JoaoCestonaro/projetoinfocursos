@@ -2,11 +2,11 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  gap: 1.4rem;
-  padding: 2.25rem;
+  gap: 1.35rem;
+  padding: 2.4rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(140deg, rgba(255, 255, 255, 0.95), rgba(238, 241, 255, 0.7));
-  border: 1px solid rgba(108, 78, 246, 0.08);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(231, 240, 247, 0.8));
+  border: 1px solid rgba(7, 22, 49, 0.08);
   box-shadow: var(--shadow-sm);
 }
 
@@ -17,21 +17,21 @@
 .course-card::before {
   content: '';
   position: absolute;
-  inset: auto auto -80px -20px;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(108, 78, 246, 0.18), transparent 70%);
+  inset: -20% auto auto -30%;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(0, 134, 201, 0.16), transparent 70%);
   z-index: 0;
 }
 
 .course-card__media {
-  width: 80px;
-  height: 80px;
-  border-radius: 26px;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
   display: grid;
   place-items: center;
-  background: rgba(108, 78, 246, 0.15);
-  border: 1px solid rgba(108, 78, 246, 0.3);
+  background: rgba(0, 134, 201, 0.12);
+  border: 1px solid rgba(0, 134, 201, 0.28);
   position: relative;
   z-index: 1;
 }
@@ -78,7 +78,7 @@
 }
 
 .course-card__tags .badge {
-  background: rgba(14, 165, 233, 0.12);
+  background: rgba(0, 179, 164, 0.1);
   color: var(--color-accent);
 }
 
@@ -94,6 +94,8 @@
   gap: 0.4rem;
   font-weight: 600;
   color: var(--color-primary-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .course-card__link:hover {

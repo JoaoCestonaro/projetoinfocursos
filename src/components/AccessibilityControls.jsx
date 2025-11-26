@@ -1,8 +1,8 @@
 ﻿import { useEffect, useMemo, useState } from 'react'
-import { LuRefreshCw, LuType, LuAccessibility, LuMoonStar, LuSun } from 'react-icons/lu'
+import { LuAccessibility, LuRefreshCw, LuType, LuMoonStar, LuSun } from 'react-icons/lu'
 import { useTheme } from '../context/ThemeContext.jsx'
 
-const FONT_OPTIONS = [0.95, 1, 1.05, 1.1]
+const FONT_OPTIONS = [0.97, 1, 1.08, 1.16, 1.24, 1.32]
 
 const getStoredValue = (key, defaultValue) => {
   if (typeof window === 'undefined') return defaultValue
@@ -51,6 +51,8 @@ const AccessibilityControls = () => {
     setIsOpen((state) => !state)
   }
 
+  const fontPercentage = useMemo(() => Math.round(fontScale * 100), [fontScale])
+
   const handleOpenVlibras = () => {
     const button = document.querySelector('[vw-access-button] button, [vw-access-button]')
     if (button) {
@@ -62,13 +64,19 @@ const AccessibilityControls = () => {
     <div className={`accessibility-drawer${isOpen ? ' is-open' : ''}`}>
       <button
         type="button"
-        className="accessibility-tab"
+        className={`accessibility-tab${isOpen ? ' is-active' : ''}`}
         aria-expanded={isOpen}
         aria-controls="accessibility-panel"
         onClick={handleToggle}
       >
-        <LuAccessibility size={20} />
-        <span>Acessibilidade</span>
+        <span className="accessibility-tab__icon" aria-hidden="true">
+          <LuAccessibility size={22} />
+        </span>
+        <span className="accessibility-tab__text">
+          <strong>Acessibilidade</strong>
+          <span>Fonte {fontPercentage}%</span>
+        </span>
+        <span className="accessibility-tab__status">{isOpen ? 'Aberto' : 'Ajustar'}</span>
       </button>
 
       <aside id="accessibility-panel" className="accessibility-panel" aria-hidden={!isOpen}>
@@ -91,7 +99,7 @@ const AccessibilityControls = () => {
             >
               A-
             </button>
-            <span className="accessibility-value">{Math.round(fontScale * 100)}%</span>
+            <span className="accessibility-value" aria-live="polite">{fontPercentage}%</span>
             <button
               type="button"
               className="accessibility-button"

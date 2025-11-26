@@ -47,6 +47,90 @@
   font-weight: 600;
 }
 
+.auth-success {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: rgba(72, 114, 210, 0.12);
+  border: 1px solid rgba(72, 114, 210, 0.3);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.auth-success span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.onboarding-survey {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(86, 96, 128, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  display: grid;
+  gap: 1.5rem;
+}
+
+:root[data-theme='dark'] .onboarding-survey {
+  background: rgba(5, 8, 22, 0.85);
+}
+
+.survey-header h2 {
+  margin: 0.4rem 0;
+  font-size: 1.25rem;
+}
+
+.survey-header p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.survey-form {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.survey-question {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.survey-question span,
+.survey-question label {
+  font-weight: 600;
+}
+
+.survey-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.survey-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 500;
+}
+
+.survey-options--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.survey-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.survey-actions p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 540px) {
   .auth-card {
     padding: 2.2rem;

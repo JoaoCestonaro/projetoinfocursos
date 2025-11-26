@@ -53,14 +53,14 @@
 .news-article-highlight {
   padding: 1.4rem 1.6rem;
   border-radius: var(--radius-lg);
-  background: rgba(108, 78, 246, 0.1);
-  border: 1px solid rgba(108, 78, 246, 0.2);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
   color: var(--color-primary-strong);
   font-weight: 600;
 }
 
 :root[data-theme='dark'] .news-article-highlight {
-  background: rgba(129, 140, 248, 0.18);
+  background: rgba(56, 189, 248, 0.18);
 }
 
 .news-article-references {

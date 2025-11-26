@@ -3,6 +3,8 @@
   bottom: 1.5rem;
   right: 1.5rem;
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: flex-end;
   gap: 1rem;
   z-index: 120;
@@ -11,36 +13,60 @@
 .accessibility-tab {
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.95rem 1.35rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(12, 18, 40, 0.95), rgba(15, 118, 255, 0.85));
+  gap: 1rem;
+  padding: 1.05rem 1.4rem;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(87, 96, 255, 0.35);
+  background: linear-gradient(130deg, rgba(7, 13, 38, 0.95), rgba(40, 119, 255, 0.85));
   color: var(--color-text-inverse);
-  font-weight: 600;
-  border: none;
-  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.35);
+  box-shadow: 0 18px 45px rgba(4, 7, 22, 0.55);
   transition: var(--transition-base);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
-.accessibility-tab svg {
-  width: 20px;
-  height: 20px;
-}
-
-.accessibility-tab::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #38bdf8;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+.accessibility-tab.is-active {
+  border-color: rgba(94, 234, 212, 0.5);
+  background: linear-gradient(130deg, rgba(4, 20, 51, 0.95), rgba(94, 234, 212, 0.3));
 }
 
 .accessibility-tab:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(4, 7, 22, 0.65);
+}
+
+.accessibility-tab__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+}
+
+.accessibility-tab__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.accessibility-tab__text strong {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.accessibility-tab__text span {
+  font-size: 0.85rem;
+  color: rgba(226, 240, 255, 0.8);
+}
+
+.accessibility-tab__status {
+  margin-left: auto;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .accessibility-panel {
@@ -117,8 +143,8 @@
 }
 
 :root[data-theme='light'] .accessibility-button {
-  border-color: rgba(108, 78, 246, 0.25);
-  background: rgba(108, 78, 246, 0.12);
+  border-color: rgba(14, 165, 233, 0.25);
+  background: rgba(14, 165, 233, 0.12);
   color: var(--color-primary-strong);
 }
 
@@ -128,11 +154,11 @@
 }
 
 .accessibility-button:not([disabled]):hover {
-  background: rgba(108, 78, 246, 0.25);
+  background: rgba(14, 165, 233, 0.25);
 }
 
 .accessibility-value {
-  min-width: 48px;
+  min-width: 52px;
   text-align: center;
   font-weight: 600;
 }

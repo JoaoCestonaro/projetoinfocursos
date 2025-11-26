@@ -11,7 +11,6 @@ const Login = () => {
       <div className="container auth-shell">
         <div className="auth-card">
           <div>
-            <span className="badge">Bem-vindo de volta</span>
             <h1>Entrar no InfoCursos</h1>
           </div>
 
